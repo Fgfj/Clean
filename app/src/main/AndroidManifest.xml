@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xacheliangroup.netline">
+    <!-- 网络及运营商相关 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 改变WIFI状态 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- WIFI状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- bugly -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 刷身份证权限 -->
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" /> <!-- 访问联网权限 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 访问网络状态的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 读取电话状态的权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" /> <!-- 改变WIFI网络状态的权限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 访问WIFI网络状态的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 二维码 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 允许应用程序写入外部存储器 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许应用程序挂载和反挂载文件系统可移动存储 -->
+    <!-- 允许应用程序删除缓存文件 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 高德地图 -->
+    <!-- //地图包、搜索包需要的基础权限 -->
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Required -->
+    <permission
+        android:name="com.xacheliangroup.netline.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required -->
+    <uses-permission android:name="com.xacheliangroup.netline.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在 6.0 系统上的层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:name=".common.CbbApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo_launchs"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".moduleTest.activity.NTestActivity"
+            android:label="@string/title_activity_ntest"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar">
+
+
+        </activity>
+
+
+        <!--********************西谓线路************************************-->
+        <service android:name="com.amap.api.location.APSService"></service>
+        <activity android:name=".moduleNetLine.activity.NetLineLoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <!-- <category android:name="android.intent.category.HOME"/> -->
+
+
+                <!-- <category android:name="android.intent.category.DEFAULT"/> -->
+            </intent-filter>
+        </activity>
+        <activity android:name=".moduleNetLine.activity.NetLineHomeActivity">
+
+        </activity>
+        <activity android:name=".moduleNetLine.activity.NetLineMapActivity">
+
+        </activity>
+        <activity android:name=".moduleNetLine.activity.NetLineListActivity">
+
+        </activity>
+        <activity android:name=".moduleNetLine.activity.NetLineQrCodeActivity">
+
+        </activity>
+        <activity android:name=".moduleNetLine.activity.NetLineCheckActivity">
+
+        </activity>
+        <activity android:name="com.amap.api.navi.AmapRouteActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name=".moduleNetLine.activity.NetLinePersonActivity">
+        </activity>
+        <!--********************西谓线路end************************************-->
+
+        <!-- ********************检票pos机start******************* -->
+        <activity android:name=".checkTickets.activity.CTChoiceStationActivity">
+
+            <!-- <intent-filter> -->
+            <!-- &lt;!&ndash;<action android:name="android.intent.action.MAIN" />&ndash;&gt; -->
+
+
+            <!-- &lt;!&ndash;<category android:name="android.intent.category.LAUNCHER" />&ndash;&gt; -->
+
+
+            <!-- &lt;!&ndash;<category android:name="android.intent.category.HOME"/>&ndash;&gt; -->
+
+
+            <!-- &lt;!&ndash;<category android:name="android.intent.category.DEFAULT"/>&ndash;&gt; -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".checkTickets.activity.CTHomeActivity"></activity>
+        <activity android:name=".checkTickets.activity.CTCarDetailActivity" />
+        <activity android:name=".checkTickets.activity.CTCheckActivity" /> <!-- ********************检票pos机end******************* -->
+        <activity android:name=".moduleTest.activity.TestMainActivity">
+             <!--<intent-filter>-->
+             <!--<action android:name="android.intent.action.MAIN" />-->
+
+
+             <!--<category android:name="android.intent.category.LAUNCHER" />-->
+
+
+             <!--&lt;!&ndash;<category android:name="android.intent.category.HOME"/>&ndash;&gt;-->
+
+
+             <!--&lt;!&ndash;<category android:name="android.intent.category.DEFAULT"/>&ndash;&gt;-->
+             <!--</intent-filter>-->
+        </activity> <!-- 构建版本 -->
+        <meta-data
+            android:name="APP_ENV"
+            android:value="${APP_ENV}" />
+
+        <activity android:name=".CbbMainActivity" />
+        <activity
+            android:name=".moduleMall.activity.MallCbbActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="user"></activity>
+
+        <service android:name=".common.service.ApplicationOnCreateIntentService" /> <!-- 欢迎页 -->
+        <activity
+            android:name=".common.LogoSplashActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="user"
+            android:theme="@style/SplashTheme"></activity> <!-- 广告页 -->
+        <activity
+            android:name=".common.AdvertActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="user"
+            android:theme="@style/ScreeTheme" /> <!-- h5 -->
+        <activity
+            android:name=".common.web.WebActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="user" /> <!-- 登录 -->
+        <activity
+            android:name=".moduleOther.activity.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="user"
+            android:windowSoftInputMode="adjustResize" /> <!-- 设置 -->
+        <activity
+            android:name=".moduleMine.activity.AppSettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="user" /> <!-- ****************商城**************** -->
+        <!-- 商家主页 -->
+        <activity
+            android:name=".moduleMall.activity.SellerHomeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="user" /> <!-- 商品分类 商家列表 -->
+        <activity
+            android:name=".moduleMall.activity.MarketingListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="user" /> <!-- 商品详情 -->
+        <activity
+            android:name=".moduleMall.activity.GoodsDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="user" /> <!-- 提交订单 -->
+        <activity
+            android:name=".moduleMall.activity.SubmitOrderActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="user" /> <!-- 订单支付 -->
+        <activity
+            android:name=".moduleMall.activity.PayOrderActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="user" /> <!-- 地址管理 -->
+        <activity
+            android:name=".moduleMine.activity.SettingAddressActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="user" /> <!-- 修改地址 -->
+        <activity
+            android:name=".moduleMine.activity.UpdateAddressActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="user" /> <!-- 订单列表 -->
+        <activity
+            android:name=".moduleMine.activity.OrderListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="user" />
+        <activity
+            android:name=".moduleMine.activity.OrderDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="user" />
+        <service android:name=".common.service.ApplicationOnService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".checkTickets.download.CommonIntentService" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="0a8156b7fc391387f3dd6d1e1143cab5" />
+
+
+
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置 android:process 参数将 PushService 放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <receiver
+            android:name=".common.receiver.MyRevice"
+            android:enabled="true">
+            <intent-filter>
+
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+        <!-- since 3.0.9 Required SDK 核心功能-->
+        <provider
+            android:authorities="com.xacheliangroup.netline.DataProvider"
+            android:name="cn.jpush.android.service.DataProvider"
+            android:exported="true"
+            tools:replace="android:exported" />
+        <!-- since 3.1.0 Required SDK 核心功能-->
+        <provider
+            android:authorities="com.xacheliangroup.netline.DownloadProvider"
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:exported="true"
+            />
+
+        <!-- Required since 3.0.7 -->
+        <!-- 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 3.3.0开始所有事件将通过该类回调 -->
+        <!-- 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter -->
+        <receiver
+            android:name=".common.receiver.ApplicationOnReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.xacheliangroup.netline" />
+            </intent-filter>
+        </receiver>
+
+
+        <!--Required SDK核心功能 since 3.3.0-->
+        <activity
+            android:name="cn.jpush.android.service.JNotifyActivity"
+            android:exported="true"
+            android:taskAffinity="jpush.custom"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.JNotifyActivity" />
+                <category android:name="com.xacheliangroup.netline" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required. For publish channel feature -->
+        <!-- JPUSH_CHANNEL 是为了方便开发者统计 APK 分发渠道。-->
+        <!-- 例如: -->
+        <!-- 发到 Google Play 的 APK 可以设置为 google-play; -->
+        <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
+        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+        <!-- Required. AppKey copied from Portal -->
+        <meta-data android:name="JPUSH_APPKEY" android:value="fa3463fc1bb705df5e3f1d4a"/>
+    </application>
+
+</manifest>

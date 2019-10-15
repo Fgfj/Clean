@@ -1,0 +1,2 @@
+# Referenced at /Users/yuzhou/Desktop/PALX-pos/ocrqs/Clean/app/build/intermediates/merged_manifests/devDebug/AndroidManifest.xml:86
+-keep class com.xacheliangroup.netline.common.CbbApplication { <init>(); }

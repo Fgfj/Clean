@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/module_net_line_dialog_title_tx"
+        android:layout_margin="20dp"
+        android:textColor="#3F3F3F"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:text="qwewqeqe"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:background="#DFDFDF"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/module_net_line_dialog_check_rv"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/module_net_line_dialog_lock_rl"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="15dp"
+            android:background="#041341"
+            android:layout_alignParentBottom="true"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="49dp">
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="锁定座位"
+                android:textSize="@dimen/cbb_sp_20"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/module_net_line_dialog_un_lock_rl"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="#041341"
+            android:layout_alignParentBottom="true"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="49dp">
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="解锁座位"
+                android:textSize="@dimen/cbb_sp_20"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

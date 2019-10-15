@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="DEV">
+        <!--车宝宝-->
+        <!--<item>http://47.92.84.90:21009/</item>-->
+        <!--检票-->
+        <!--<item>http://cjztc.sxpalx.com:21002/cjztc/</item>-->
+        <item>http://192.168.0.253:8080/</item>
+    </string-array>
+    <string-array name="UAT">
+        <!--<item>http://192.168.0.101:8080</item>-->
+        <!--<item>http://cjztc.sxpalx.com:21002/cjztc/</item>-->
+        <item>http://192.168.0.218:8080/</item>
+    </string-array>
+    <string-array name="RELEASE">
+        <!--<item>http://jzcar.chelianjk.com:21001</item>-->
+        <!--<item>http://192.168.0.253:8080/</item>-->
+        <item>http://cjztc.sxpalx.com:21002/cjztc/</item>
+        <!--<item>http://192.168.0.219:8080</item>-->
+    </string-array>
+
+
+    <!--城西-->
+    <string-array name="CX">
+        <item>http://192.168.0.124:8080/</item>
+        <!--<item>http://192.168.0.134:8088/</item>-->
+        <!--<item>http://192.168.18.19:8088/</item>-->
+    </string-array>
+    <!--纺织城-->
+    <string-array name="FZC">
+        <item>http://192.168.18.10:8088/</item>
+    </string-array>
+    <!--杨凌-->
+    <string-array name="YL">
+        <item>http://192.168.0.132:8088/</item>
+    </string-array>
+    <!--三府湾-->
+    <string-array name="SFW">
+        <item>http://192.168.0.133:8088/</item>
+    </string-array>
+</resources>

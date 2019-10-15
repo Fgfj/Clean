@@ -1,0 +1,7 @@
+#Tue Oct 15 09:51:53 CST 2019
+base.0=/Users/yuzhou/Desktop/PALX-pos/ocrqs/Clean/app/build/intermediates/dex/RELEASERelease/mergeDexRELEASERelease/out
+path.1=classes2.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/Users/yuzhou/Desktop/PALX-pos/ocrqs/Clean/app/build/intermediates/dex/RELEASERelease/mergeDexRELEASERelease/out

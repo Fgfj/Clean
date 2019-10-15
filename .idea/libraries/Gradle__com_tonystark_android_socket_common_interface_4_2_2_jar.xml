@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.tonystark.android:socket-common-interface:4.2.2@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tonystark.android/socket-common-interface/4.2.2/36a2cec316df66b4a816e6535c96e8a2427d5783/socket-common-interface-4.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tonystark.android/socket-common-interface/4.2.2/6f5f75b74545d7247d699208d5344b5cbd77e97f/socket-common-interface-4.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

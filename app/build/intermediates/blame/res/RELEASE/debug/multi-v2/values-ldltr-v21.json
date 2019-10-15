@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/yuzhou/Desktop/PALX-pos/ocrqs/Clean/app/build/intermediates/incremental/mergeRELEASEDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "/Users/yuzhou/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/46b44daff9f4146594edd7c63a47fcc1/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}

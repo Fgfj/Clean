@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_list"
+            android:title="查看个人中心" />
+
+    </group>
+    <item android:title="车辆操作">
+        <menu>
+            <item
+                android:id="@+id/push_fix"
+                android:title="报修/报修中" />
+            <item
+                android:id="@+id/push_rest"
+                android:title="休息/休息中" />
+            <item
+                android:id="@+id/safe_q_post"
+                android:title="紧急维修" />
+        </menu>
+    </item>
+    <item android:title="用户操作">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:title="退出登录" />
+        </menu>
+    </item>
+</menu>
