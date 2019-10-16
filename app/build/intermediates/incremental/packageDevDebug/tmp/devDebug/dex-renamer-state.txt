@@ -1,13 +1,10 @@
-#Wed Oct 16 01:14:41 CST 2019
-path.3=classes_0.dex
-path.2=classes2.dex
-path.1=classes.dex
+#Wed Oct 16 09:04:53 CST 2019
+path.2=classes3.dex
+path.1=classes2.dex
 path.0=classes.dex
-renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.3=/Users/yuzhou/Desktop/PALX-pos/ocrqs/Clean/app/build/intermediates/dex/devDebug/mergeLibDexDevDebug/out
-base.2=/Users/yuzhou/Desktop/PALX-pos/ocrqs/Clean/app/build/intermediates/dex/devDebug/mergeExtDexDevDebug/out
-base.1=/Users/yuzhou/Desktop/PALX-pos/ocrqs/Clean/app/build/intermediates/dex/devDebug/mergeExtDexDevDebug/out
-base.0=/Users/yuzhou/Desktop/PALX-pos/ocrqs/Clean/app/build/intermediates/dex/devDebug/mergeProjectDexDevDebug/out
+base.2=/Users/yuzhou/Desktop/PALX-pos/ocrqs/Clean/app/build/intermediates/dex/devDebug/mergeDexDevDebug/out
+base.1=/Users/yuzhou/Desktop/PALX-pos/ocrqs/Clean/app/build/intermediates/dex/devDebug/mergeDexDevDebug/out
+base.0=/Users/yuzhou/Desktop/PALX-pos/ocrqs/Clean/app/build/intermediates/dex/devDebug/mergeDexDevDebug/out
